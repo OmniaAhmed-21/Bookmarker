@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="book Marker" />
+    <!--when search in google about book Marker is appreash this website because its -->
+    <meta name="author" content="Omnia Ahmed" />
+    <title>Book Mark</title>
+    <!-- =================== image icon website===================== -->
+    <link rel="shortcut icon" href="images/bookmark-icon-symbol-design-illustration-vector.webp" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container py-5">
+        <section>
+            <div class="d-flex justify-content-center align-item-center">
+                <h1 class="py-2 mb-2 ">BookMarker</h1>
+            </div>
+            <div onclick="changecolor()" class="palete">
+                <i class="fa-solid fa-palette palete"></i>
+            </div>
+            
+            <div class="bookmark-body mt-5 py-4 p-3">
+                <div class="d-flex justify-content-center align-item-center">
+                    <h2>
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                </div>
+                <div class="mb-3">
+                    <label for="bookmark-name" class="form-label pd-2"><i class="fa-solid fa-book-bookmark pe-4"></i>Site Name</label>
+                    <input oninput="ValidationElement(this , 'msgName')" type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                    <p id="msgName" class="alert alert-danger d-none">
+                        It must start with a letter , be 3 t0 20 characters long, and can only contain letters, numbers and underscore.
+                    </p>
+                </div>
+
+                <div class="mb-3">
+                    <label for="bookmark-url" class="form-label pd-2"><i class="fa-solid fa-link pe-4"></i>Site URL</label>
+                    <input oninput="ValidationElement(this ,'msgUrl' )" type="url" class="form-control" id="bookmarkUrl" placeholder="Website Url">
+                    <p id="msgUrl" class="alert alert-danger d-none">
+                        invalid pattern URL
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center align-item-center">
+                    <button  onclick="AddBookmark()" class="btn btn-submit px-5">sumbit</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <table class="table text-center bg-light mt-4 w-100">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent">
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <div class="alertBox d-flex justify-content-center align-items-center d-none container">
+                <div class="box  bg-white d-flex justify-content-center align-items-center flex-column">
+                <div class="icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h2>Site added successfully</h2>
+                <button class="btn-ok">Ok</button>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div class="alertBoxDelete d-flex justify-content-center align-items-center d-none ">
+                <div class="box-delete  bg-white d-flex justify-content-center align-items-center flex-column ">
+                <div class="icon-warning">
+                    <i class="fa-solid fa-exclamation"></i>
+                </div>
+                <h2>Are you sure?</h2>
+                <p class="py-2">You won't be able to revert this!</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class=" me-3 btn btn-delete ">Yes,Delete it!</button> 
+                    <button class=" me-1 btn btn-danger btn-cancel">Cancel</button>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div class="alertDeleted d-flex justify-content-center align-items-center d-none ">
+                <div class="boxDelete2  bg-white d-flex justify-content-center align-items-center flex-column">
+                <div class="icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h2>Deleted!</h2>
+                <p>Your site has been deleted.</p>
+                <button class="btn-ok2">Ok</button>
+            </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
