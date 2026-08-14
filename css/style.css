@@ -199,3 +199,20 @@ p{
     font-family: Righteous;
     src: url(../fonts/Righteous-Regular.ttf);
 }
+@media screen and (max-width:640px) {
+    .bookmark-body h2{
+    line-height: 30px;
+    font-size: 19px;
+}
+}
+@media screen and (max-width:990px) {
+    .alertBox  .box{
+    width: 100%;
+}
+    .alertBoxDelete  .box-delete{
+    width: 100%;
+}
+.alertDeleted .boxDelete2{
+    width: 100%;
+}
+}
