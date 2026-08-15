@@ -204,15 +204,15 @@ p{
     line-height: 30px;
     font-size: 19px;
 }
-};
+}
 @media screen and (max-width:990px) {
     .alertBox  .box{
     width: 100%;
-};
+}
     .alertBoxDelete  .box-delete{
     width: 100%;
-};
+}
 .alertDeleted .boxDelete2{
     width: 100%;
 }
-};
+}
